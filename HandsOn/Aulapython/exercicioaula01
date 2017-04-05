@@ -1,0 +1,23 @@
+#IDADE
+#ALCOOLIZADA
+#HABILITACAO
+
+idade = int (raw_input ("digite sua idade"))
+habilitacao = raw_input ("tem habilitacao digite S ou N ").upper()
+alcoolizada = raw_input ( "esta alcoolizado digite S ou N").upper()
+
+if (idade < 18):
+	print (" vc e menor de idade" )
+
+	
+elif (habilitacao == "N" ):
+	print (" vc nao pode dirigir")
+
+elif (alcoolizada == "S" ):
+	print ("vc esta alcoolizado / nao pode dirigir ")
+
+else: 
+	print ("vc pode dirigir")
+
+
+

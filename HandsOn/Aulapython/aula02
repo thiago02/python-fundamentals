@@ -1,0 +1,11 @@
+nome = "B"
+if nome:
+	print "PRIMEIRO IF"
+	if nome == "D":
+		print "segundo if"
+elif nome == "A":
+	print "primeiro elif"
+elif nome == "C":
+	print "segundo elif"
+else: 
+	print "PRIMEIRO ELSE"

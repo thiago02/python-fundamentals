@@ -1,0 +1,32 @@
+#string = "python"
+
+#print string [0]
+
+
+#host = "192.168.202.4"
+#user = "root"
+#senha = "123"
+
+#host = raw_input("Insira o hostname")
+#user = raw_input("Insira o usuario" )
+#senha = raw_input("Insira a senha")
+
+#print "Acessando host %s:%s %s" % (user, host, senha)
+
+num1 = float (raw_input("insira o primeiro valor:"))
+num2 = float (raw_input("insira o segundo valor:"))
+
+print (num1 * num2) + 5 
+print num1 + num2 
+print num1 - num2
+print num1 / num2
+print num1 % num2
+
+
+# ----------------
+
+if numero != numero2:
+
+
+
+
