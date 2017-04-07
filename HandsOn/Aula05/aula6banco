@@ -15,4 +15,4 @@ VALUES ('a crise no brasil' , 'bla bla bla' )" )
 
 
 
-con.commit()	
+con.commit()	q
