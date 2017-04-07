@@ -1,0 +1,18 @@
+import psycopg2
+
+con = psycopg2.connect(
+	"host=%s dbname=%s user=%s password=%s" % (
+	'localhost' , 'projeto' , 'postgres' , '123456'
+
+	)
+
+)
+
+cur = con.cursor()
+cur.execute(" \
+INSERT INTO posts (conteudo, titulo) \
+VALUES ('a crise no brasil' , 'bla bla bla' )" )
+
+
+
+con.commit()	
