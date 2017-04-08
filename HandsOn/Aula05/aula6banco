@@ -10,14 +10,17 @@ con = psycopg2.connect(
 
 
 cur = con.cursor()
-
+# -----------SELECT 
 cur.execute("SELECT * FROM posts")
 
 for row in cur.fetchall():
 	print 'ID: %s \n Titulo: %s \n Conteudo: %s' %(row)
 
-registro = cur.fetchone()
-print registro
+
+
+
+#registro = cur.fetchone()
+#print registro
 
 
 

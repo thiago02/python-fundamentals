@@ -1,0 +1,13 @@
+# CRIAR UM LOOP QUE PEDE 4 OPCOES: 
+# LOGAR
+# INSERIR USUARIO
+# BUSCAR USUARIO
+# SAIR 
+#
+#
+#
+
+import psycopg2
+
+
+
