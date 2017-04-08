@@ -8,11 +8,25 @@ con = psycopg2.connect(
 
 )
 
+
 cur = con.cursor()
-cur.execute(" \
-INSERT INTO posts (conteudo, titulo) \
-VALUES ('a crise no brasil' , 'bla bla bla' )" )
+
+cur.execute("SELECT * FROM posts")
+
+for row in cur.fetchall():
+	print 'ID: %s \n Titulo: %s \n Conteudo: %s' %(row)
+
+registro = cur.fetchone()
+print registro
 
 
 
-con.commit()	q
+#cur = con.cursor()
+#cur.execute(" \
+#INSERT INTO posts (conteudo, titulo) \
+#VALUES ('a crise no brasil' , 'bla bla bla' )" )
+
+
+#if cur.rowcount:
+#	print "registro inserido com sucesso"
+#	cur= commit()
