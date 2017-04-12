@@ -12,8 +12,8 @@ print con
 
 # INSERIR UM POST 
 
-conteudo = raw_input("digite o conteudo")
-titulo = raw_input ("digite o titulo")
+conteudo = raw_input("digite o conteudo: ")
+titulo = raw_input ("digite o titulo: ")
 cur = con.cursor()
 cur.execute(" \
 INSERT INTO posts (conteudo, titulo) \
@@ -29,7 +29,7 @@ print cur.rowcount
 cur.execute("SELECT * FROM posts")
 
 for row in cur.fetchall():
-	print 'Conteudo: %s \n Titulo: %s' %(
+	print 'Conteudo: %s \n Titulo:  %s' %(
 		row[1], row[2] 	)
 	
 
@@ -38,7 +38,7 @@ for row in cur.fetchall():
 # RECEBE TRECHO DO TITULO 
 id = raw_input ("digite um trecho na busca: ")
 
-cur.execute("SELECT * FROM posts WHERE id=%s " % id)
+cur.execute("SELECT * FROM posts WHERE id= %s " % id)
 
 row = cur.fetchone()
 
