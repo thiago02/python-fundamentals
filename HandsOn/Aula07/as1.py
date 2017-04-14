@@ -3,9 +3,9 @@ from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-
-#engine = create_engine('sqlite:///banco.db') #caminho para selecionar o banco 
-engine = create_engine('postgressql://postgres:123456@localhost:5432/projeto')
+#mantem o mesmo codigo apenas modifica o caminho do banco 
+#engine = create_engine('sqlite:///banco.db') #caminho para selecionar o banco Sqlite
+engine = create_engine('postgresql://postgres:123456@localhost:5432/projeto') #cria no postgres
 Base = declarative_base()
 
 class Usuario(Base): 
@@ -24,7 +24,7 @@ session = Session()   #session e uma variavel poderia ser qualquer nome
 
 if __name__ == '__main__':
 	try:
-		usuario = Usuario(nome=lista) #cria um usuario no banco
+		usuario = Usuario(nome='gabriel') #cria um usuario no banco
 		session.add(usuario)
 		session.commit()
 		#usuario = session.query(Usuario).get(1)
