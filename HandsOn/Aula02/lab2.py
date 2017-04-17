@@ -10,18 +10,35 @@ login = None
 senha = None
 
 def Cadastrar(a,b):
+    global usuarios
+    global senhas
     global login
     global senha
+   
+
+
     login = raw_input('Login: ')
     senha = raw_input('Senha: ')
     usuarios.append(login)
     senhas.append(senha)
     raw_input('usuario cadastrado com sucesso')
 
+    return True 
+    
+
 def Acessar(a,b):
+    global usuarios
+    global senhas
+    global login
+    global senha
     login = raw_input('Insira login: ')
     senha = raw_input('Insira a senha: ')
 
+    if login in usuarios:
+        if senhas[usuarios.index(login)] == senha:
+            return True
+    return False
+    
 
 
 
@@ -35,17 +52,13 @@ while True:
 
         
     elif opcao == 2:
-        Acessar(login,senha)
+        if Acessar(login,senha):
 
-
-
-
-        if login in usuarios:
-            if senhas[usuarios.index(login)] == senha:
-                print 'Logado com sucesso!'
-                continue
-
-        print 'Login ou senha invalidos'
+            print 'Logado com sucesso!'
+        
+        else:
+            print 'Login ou senha invalidos'
+                        
     elif opcao == 3:
         print 'Ate logo'
         break
