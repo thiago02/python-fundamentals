@@ -3,6 +3,10 @@ import psycopg2
 class Conexao:
 	con = None
 	cur = None
+class Inserir:
+	titulo = None
+	conteudo = None
+	
 
 
 
@@ -37,3 +41,13 @@ print objeto.cur
 print objeto.find_one(2)
 
 
+class Banco(Inserir):
+	def __init__(self,conteudo,titulo):
+		conteudo = raw_input("digite o conteudo: ")
+		titulo = raw_input ("digite o titulo: ")
+		cur = con.cursor()
+		cur.execute(" \ INSERT INTO posts (conteudo, titulo) \
+		VALUES ('%s' , '%s' )" %(conteudo, titulo) )
+	con.commit
+
+print cur.rowcount
