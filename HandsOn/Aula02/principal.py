@@ -1,5 +1,5 @@
 from Usuarios.Usuarios import *
-from Servidores.Servidores import *
+from servidores.servidores import *
 
 while True:
     menu = '''     -= Sistema =-
